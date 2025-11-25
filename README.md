@@ -4,12 +4,14 @@ Verfasser: Elyesa Imamoglu, 4CHIT
 ## Fragen und Antworten
 
 1. What is gRPC and why does it work accross languages and platforms?
+
    gRPC ist ein leistungsfähiges RPC-Framework, das Dienste über Netzwerke verbindet.
    Es funktioniert sprach- und plattformübergreifend, weil es:
    Protocol Buffers zur Schnittstellenbeschreibung nutzt
    für viele Sprachen automatisch Client- und Server-Code generiert
    auf HTTP/2 basiert (effizient, schnell)
 2. Describe the RPC life cycle starting with the RPC client?
+
    Client ruft die Stub-Methode auf
    Anfrage wird in Protobuf serialisiert
    Über HTTP/2 an Server gesendet
@@ -19,22 +21,26 @@ Verfasser: Elyesa Imamoglu, 4CHIT
    Server sendet Antwort zurück
    Client deserialisiert und liefert Ergebnis zurück
 3. Describe the workflow of Protocol Buffers?
+
    .proto-Datei definieren
    Mit protoc Code generieren
    Daten werden serialisiert/deserialisiert
    Im Programm wie normale Objekte verwenden
 4. What are the benefits of using protocol buffers?
+
    Sehr schnell & kompakt
    Stark typisiert
    Kompatibel bei Versionierung
    Automatische Codegenerierung
    Plattform- und sprachunabhängig
 5. When is the use of protocol not recommended?
+
    Wenn Daten menschlich lesbar sein müssen
    Für Browser-APIs, die lieber JSON nutzen
    Für häufiges Debugging per Textformat
    Bei sehr dynamischen, unstrukturierten Daten
 6. List 3 different data types that can be used with protocol buffers?
+
    int32
    string
    bool
